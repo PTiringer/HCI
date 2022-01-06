@@ -32,14 +32,14 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     margin:30px 4%;
     min-height:600px;
     padding:10px 4%;
-    width:84%;
+    width:92%;
 }
 
 #submit-button {
     float:left;
     margin:30px 4%;
     text-align:center;
-    width:84%;
+    width:92%;
 }
 #submit-button a {
     background:#c6e2ff;
@@ -55,7 +55,7 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     margin:30px 4%;
     min-height:700px;
     padding:10px 4%;
-    width:84%;
+    width:92%;
 }
 
 #table-selection {
@@ -63,7 +63,7 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     margin:30px 4%;
     min-height:400px;
     padding:10px 4%;
-    width:84%;
+    width:92%;
 }
 
 #food-selection {
@@ -71,7 +71,7 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     margin:30px 4%;
     min-height:200px;
     padding:10px 4%;
-    width:84%;
+    width:92%;
 }
 
 #result {
