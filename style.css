@@ -1,0 +1,81 @@
+body { background:#fafafa;box-sizing:border-box;font-family:'Trebuchet MS', sans-serif;margin:0 5%;width:90%; }
+body * { display:inline-block;font-size:16pt; }
+
+#header {
+    background-color:#daf0b9;
+    padding:20px 0;
+    text-align:center;
+    width:100%;
+}
+#header a {
+    color:green;
+    font-size:24pt;
+    font-weight:600;
+    text-decoration:none;
+}
+
+#index-list { border-bottom:1px solid green;border-top:1px solid green;width:100%; }
+#index-list div { float:left;text-align:center;width:12%; }
+#index-list a { color:green;padding:10px 0;text-decoration:none;width:100%; }
+#index-list div:hover { background:#f0ffd9; }
+#logo { margin-top:50px;text-align:center;width:100%; }
+
+
+#main-box { width:100%; }
+#left-panel { float:left;width:50%; }
+#right-panel { float:right;width:50%; }
+
+#form, #reservations, #table-selection, #food-selection, #result { background:#f2f2f2; }
+
+#form {
+    float:left;
+    margin:30px 4%;
+    min-height:600px;
+    padding:10px 4%;
+    width:84%;
+}
+
+#submit-button {
+    float:left;
+    margin:30px 4%;
+    text-align:center;
+    width:84%;
+}
+#submit-button a {
+    background:#c6e2ff;
+    padding:10px 4%;
+    text-decoration:none;
+}
+#submit-button a:hover {
+    background-color:#8ec5ff;
+}
+
+#reservations {
+    float:left;
+    margin:30px 4%;
+    min-height:700px;
+    padding:10px 4%;
+    width:84%;
+}
+
+#table-selection {
+    float:right;
+    margin:30px 4%;
+    min-height:400px;
+    padding:10px 4%;
+    width:84%;
+}
+
+#food-selection {
+    float:right;
+    margin:30px 4%;
+    min-height:200px;
+    padding:10px 4%;
+    width:84%;
+}
+
+#result {
+    margin:30px 2%;
+    min-height:700px;
+    width:96%;
+}
