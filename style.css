@@ -25,7 +25,7 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 #left-panel { float:left;width:50%; }
 #right-panel { float:right;width:50%; }
 
-#form, #reservations, #table-selection, #food-selection, #result, #impressum { background:#f2f2f2; }
+#form, #reservations, #table-selection, #food-selection, #result, #impressum, #customerInfo { background:#f2f2f2; }
 
 #form {
     float:left;
@@ -136,4 +136,31 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 #comment {
     width: 100%;
     height: 40%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	display: table;
+}
+
+td, th {
+	border: 1px solid green;
+	display: table-cell;
+	text-align: center;
+}
+
+tr { display: table-row; }
+tr:nth-child(even) { background-color: #dddddd; }
+tr:hover { background:#f0ffd9; }
+
+tbody { display: table-row-group; }
+thead { display: table-header-group;}
+
+#customerInfo {
+    float:right;
+    margin:30px 4%;
+    min-height:200px;
+    padding:10px 4%;
+    width:92%;
 }

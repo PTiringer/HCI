@@ -25,9 +25,19 @@
             <div id="left-panel">
 
                 <!-- RESERVIERUNGEN (DATUM, KUNDEN, ESSEN) -->
-                <div id="reservations">
-                    &nbsp;
-                </div>
+                <table id="reservations">
+                    <thead>
+					<tr>
+						<th>Datum</th>
+						<th>Uhrzeit</th>
+						<th>Name</th>
+						<th>Plätze</th>
+					</tr>
+					</thead>
+					
+					<tbody id="reservationData"></tbody>
+					
+                </table>
 
             </div>
 
@@ -37,6 +47,16 @@
                 <div id="table-selection">
                     &nbsp;
                 </div>
+				
+				<div id="customer-info">
+					<h1>Kommentar:</h1>
+					
+					<p id="commentInfo"></p><br/>
+					
+					<h1>E-Mail:</h1>
+					
+					<p id="emailInfo"></p>
+				</div>
 
             </div>
 
