@@ -29,3 +29,53 @@ function customerInfo(email, comment) {
 	/*Markieren vom ausgewählten Tisch auf der Karte.
 	Information über den Tisch sollte in das json Array.*/
 }
+
+	/*Funktionen fürs Essen vorbestellen*/
+	
+function doMinus_salat(){
+	if (document.getElementById("count_salat").value > 0) {
+	document.getElementById("count_salat").value = --document.getElementById("count_salat").value;}
+}
+function doPlus_salat(){
+  document.getElementById("count_salat").value = ++document.getElementById("count_salat").value;
+}
+
+function doMinus_suppe(){
+	if (document.getElementById("count_suppe").value > 0) {
+	document.getElementById("count_suppe").value = --document.getElementById("count_suppe").value;}
+}
+function doPlus_suppe(){
+  document.getElementById("count_suppe").value = ++document.getElementById("count_suppe").value;
+}
+
+function doMinus_steak(){
+	if (document.getElementById("count_steak").value > 0) {
+	document.getElementById("count_steak").value = --document.getElementById("count_steak").value;}  
+}
+function doPlus_steak(){
+  document.getElementById("count_steak").value = ++document.getElementById("count_steak").value;
+}
+
+function doMinus_ravioli(){
+	if (document.getElementById("count_ravioli").value > 0) {
+	document.getElementById("count_ravioli").value = --document.getElementById("count_ravioli").value;}  
+}
+function doPlus_ravioli(){
+  document.getElementById("count_ravioli").value = ++document.getElementById("count_ravioli").value;
+}
+
+function doMinus_gemuese(){
+	if (document.getElementById("count_gemuese").value > 0) {
+	document.getElementById("count_gemuese").value = --document.getElementById("count_gemuese").value;}  
+}
+function doPlus_gemuese(){
+  document.getElementById("count_gemuese").value = ++document.getElementById("count_gemuese").value;
+}
+
+function doMinus_mousse(){
+	if (document.getElementById("count_mousse").value > 0) {
+	document.getElementById("count_mousse").value = --document.getElementById("count_mousse").value;}  
+}
+function doPlus_mousse(){
+  document.getElementById("count_mousse").value = ++document.getElementById("count_mousse").value;
+}
