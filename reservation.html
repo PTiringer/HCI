@@ -57,9 +57,13 @@
                 </div>
 
                 <!-- ESSEN AUSWAHL -->
-                <div id="food-selection">
-                    Bitte wählen Sie das gewünschte Essen aus, falls Sie es vorbestellen möchten:
-                    <table>
+		<div id="food-selection">
+			<div>
+			Essen vorbestellen:  <input type="checkbox" id="food_checkbox" onclick="checkFood()">
+			</div>
+			<div id=food_text style="display:none">
+                    	Bitte wählen Sie Ihr gewünschtes Essen aus:
+                   		 <table>
 						<thead>
 						<tr>
 							<th>Essen</th>
