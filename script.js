@@ -79,3 +79,17 @@ function doMinus_mousse(){
 function doPlus_mousse(){
   document.getElementById("count_mousse").value = ++document.getElementById("count_mousse").value;
 }
+
+function checkFood() {
+  // Get the checkbox
+  var check_food = document.getElementById("food_checkbox");
+  // Get the output text
+  var food_text = document.getElementById("food_text");
+
+  // If the checkbox is checked, display the output text
+  if (check_food.checked == true){
+    food_text.style.display = "block";
+  } else {
+    food_text.style.display = "none";
+  }
+}
