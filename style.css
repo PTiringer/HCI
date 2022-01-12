@@ -1,5 +1,5 @@
-body { background:#fafafa;font-family:'Trebuchet MS', sans-serif;margin:0 5%;width:90%; }
-body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
+body { background:#fafafa;margin:0 5%;width:90%; }
+body * { box-sizing:border-box;display:inline-block;font-family:'Trebuchet MS', sans-serif;font-size:16pt; }
 
 #header {
     background-color:#daf0b9;
@@ -53,9 +53,11 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 #reservations {
     float:left;
     margin:30px 4%;
-    min-height:700px;
     padding:10px 4%;
     width:92%;
+}
+#reservations td, #reservations th {
+    padding:5px 0;
 }
 
 #table-selection {
@@ -68,7 +70,8 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 
 #food-selection {
     float:right;
-    margin:30px 4%;
+
+    margin:0 4%;
     min-height:200px;
     padding:10px 4%;
     width:92%;
@@ -90,13 +93,12 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 #date_time_container {
     display: flex;
     width: 100%;
-    height: 10%;
     padding: 10px;
 }
 
 #data_container {
+    margin-top:45px;
     width: 100%;
-    height: 90%;
 }
 
 #date {
@@ -104,16 +106,21 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     height: 100%;
 }
 
+.select-date { width:100%; }
+
 #select-day {
     border: 1px solid black;
-    font-family:'Trebuchet MS', sans-serif;
+    float:left;
     border-radius: 4px;
+    width:30%;
 }
 
 #select-month {
     border: 1px solid black;
-    font-family:'Trebuchet MS', sans-serif;
+    float:left;
     border-radius: 4px;
+    margin-left:10%;
+    width:60%;
 }
 
 #spacing {
@@ -122,42 +129,37 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 }
 
 #time {
-    width: 40%;
+    margin-left:10%;
+    width: 20%;
     height: 100%;
 }
-
 #time_content {
     border: 1px solid black;
-    font-family:'Trebuchet MS', sans-serif;
     border-radius: 4px;
+    width:100%;
 }
 
 #name {
     width: 100%;
-    height: 20%;
 }
 
 #name_content {
-    margin-top: 45px;
     border: 1px solid black;
-    width: 100%;
+    width: 80%;
     border-radius: 4px;
     background-color: white;
     display: inline-block;
     padding: 8px 20px;
-    font-family:'Trebuchet MS', sans-serif;
-
 }
 
 #email {
+    margin-top:20px;
     width: 100%;
-    height: 20%;
 }
 
 #email_content {
-    margin-top: 20px;
     border: 1px solid black;
-    width: 100%;
+    width: 80%;
     border-radius: 4px;
     background-color: white;
     display: inline-block;
@@ -166,8 +168,8 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 }
 
 #seat {
+    margin-top:20px;
     width: 50%;
-    height: 20%;
 }
 
 #seat_content {
@@ -179,8 +181,8 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 }
 
 #comment {
+    margin-top:50px;
     width: 100%;
-    height: 40%;
 }
 
 #comment_content {
@@ -191,6 +193,8 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     padding: 8px 20px;
     height: 200px;  
 }
+
+#food_text { margin-top:10px; }
 
 table {
 	width: 100%;
