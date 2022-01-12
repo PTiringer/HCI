@@ -89,14 +89,12 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 
 #date_time_container {
     display: flex;
-    /*background-color: brown;*/
     width: 100%;
     height: 10%;
     padding: 10px;
 }
 
 #data_container {
-    /*background-color: chartreuse;*/
     width: 100%;
     height: 90%;
 }
@@ -104,7 +102,18 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 #date {
     width: 40%;
     height: 100%;
-    /*background-color: cornsilk;*/
+}
+
+#select-day {
+    border: 1px solid black;
+    font-family:'Trebuchet MS', sans-serif;
+    border-radius: 4px;
+}
+
+#select-month {
+    border: 1px solid black;
+    font-family:'Trebuchet MS', sans-serif;
+    border-radius: 4px;
 }
 
 #spacing {
@@ -115,7 +124,12 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
 #time {
     width: 40%;
     height: 100%;
-    /*background-color: darkmagenta;*/
+}
+
+#time_content {
+    border: 1px solid black;
+    font-family:'Trebuchet MS', sans-serif;
+    border-radius: 4px;
 }
 
 #name {
@@ -123,19 +137,59 @@ body * { box-sizing:border-box;display:inline-block;font-size:16pt; }
     height: 20%;
 }
 
+#name_content {
+    margin-top: 45px;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 4px;
+    background-color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    font-family:'Trebuchet MS', sans-serif;
+
+}
+
 #email {
     width: 100%;
     height: 20%;
 }
 
+#email_content {
+    margin-top: 20px;
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 4px;
+    background-color: white;
+    display: inline-block;
+    padding: 8px 20px;
+    font-family:'Trebuchet MS', sans-serif;
+}
+
 #seat {
-    width: 40%;
+    width: 50%;
     height: 20%;
+}
+
+#seat_content {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100%;
+    font-family:'Trebuchet MS', sans-serif;
+    padding: 5px;
 }
 
 #comment {
     width: 100%;
     height: 40%;
+}
+
+#comment_content {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 4px;
+    background-color: white;
+    padding: 8px 20px;
+    height: 200px;  
 }
 
 table {

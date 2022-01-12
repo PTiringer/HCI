@@ -31,15 +31,92 @@
             <!-- FORM (DATUM, NAME, MAIL) -->
             <div id="form">
                 <div id="date_time_container"> 
-                    <div id='date'> date </div>
+                    <div id='date'> 
+						<div class="select-date">
+							<select id="select-day">
+								<option> 1 </option>
+								<option> 2 </option>
+								<option> 3 </option>
+								<option> 4 </option>
+								<option> 5 </option>
+								<option> 6 </option>
+								<option> 7 </option>
+								<option> 8 </option>
+								<option> 9 </option>
+								<option> 10 </option>
+								<option> 11 </option>
+								<option> 12 </option>
+								<option> 13 </option>
+								<option> 14 </option>
+								<option> 15 </option>
+								<option> 16 </option>
+								<option> 17 </option>
+								<option> 18 </option>
+								<option> 19 </option>
+								<option> 20 </option>
+								<option> 21 </option>
+								<option> 22 </option>
+								<option> 23 </option>
+								<option> 24 </option>
+								<option> 25 </option>
+								<option> 26 </option>
+								<option> 27 </option>
+								<option> 28 </option>
+								<option> 29 </option>
+								<option> 30 </option>
+								<option> 31 </option>
+							</select>
+							<select id="select-month">
+								<option value="0">Januar
+								<option value="1">Februar
+								<option value="2">März
+								<option value="3">April
+								<option value="4">Mai
+								<option value="5">Juni
+								<option value="6">Juli
+								<option value="7">August
+								<option value="8">September
+								<option value="9">October
+								<option value="10">November
+								<option value="11">Dezember
+							</select>
+						  </div>	
+					</div>
                     <div id="spacing"> </div>
-                    <div id='time'> time </div>
+                    <div id='time'>
+						<select id="time_content">
+							<option> 16:00 </option>
+							<option> 16:30 </option>
+							<option> 17:00 </option>
+							<option> 17:30 </option>
+							<option> 18:00 </option>
+							<option> 18:30 </option>
+							<option> 19:00 </option>
+							<option> 19:30 </option>
+							<option> 20:00 </option>
+							<option> 20:30 </option>
+							<option> 21:00 </option>
+							<option> 21:30 </option>
+							<option> 22:00 </option>
+							<option> 22:30 </option>
+						</select>
+					</div>
                 </div>
                 <div id="data_container">
-                    <div id="name"> name </div>
-                    <div id="email"> email</div>
-                    <div id="seat"> seat</div>
-                    <div id="comment"> comment</div>
+                    <div id="name"> 
+						<input type="text" id="name_content" placeholder="Name"> </input>	
+					</div>
+                    <div id="email">
+						<input type="email" id="email_content" placeholder="E-Mail"> </input>
+					</div>
+                    <div id="seat"> 
+						<select id="seat_content">
+							<option> Keinen Platz reservieren</option>
+						</select> 
+					</div>
+                    <div id="comment"> 
+						<textarea name="message" id="comment_content" placeholder="Bemerkungen"></textarea>
+					</div>
                 </div>
                 &nbsp;
             </div>
