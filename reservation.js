@@ -13,6 +13,8 @@ function reserve() {
         $('#alert-text').append(`Please add a name.<br/>`);
         $('#name_content').css("border-color", "red");
         error = true;
+    } else {
+        $('#name_content').css("border-color", "black");
     }
 
     // check if the user has selected an email
@@ -25,6 +27,8 @@ function reserve() {
         $('#alert-text').append(`Please add a valid email-address.<br/>`);
         $('#email_content').css("border-color", "red");
         error = true;
+    } else {
+        $('#email_content').css("border-color", "black");
     }
 
     if ( error ) {
