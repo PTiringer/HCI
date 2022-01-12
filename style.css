@@ -222,3 +222,18 @@ thead { display: table-header-group;}
     padding:10px 4%;
     width:92%;
 }
+
+#alert {
+    border:1px solid #000;
+    border-radius:3px;
+    background-color:#fff;
+    display:none;
+    left:40%;
+    padding:20px;
+    position:absolute;
+    text-align:center;
+    top:300px;
+    width:20%;
+}
+
+#alert p { margin:10px 0 30px 0;padding:0; }

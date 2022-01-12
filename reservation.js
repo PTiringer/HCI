@@ -1,4 +1,38 @@
+function valid_mail(str) {
+    var r = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return r.test(str);
+}
+
 function reserve() {
+    var error = false;
+    $('#alert-text').empty();
+
+    // check if the user has selected a name
+    var name = $('#name_content').val();
+    if ( !name ) {
+        $('#alert-text').append(`Please add a name.<br/>`);
+        $('#name_content').css("border-color", "red");
+        error = true;
+    }
+
+    // check if the user has selected an email
+    var email = $('#email_content').val();
+    if ( !email ) {
+        $('#alert-text').append(`Please add an email-address.<br/>`);
+        $('#email_content').css("border-color", "red");
+        error = true;
+    } else if ( !valid_mail(email) ) {
+        $('#alert-text').append(`Please add a valid email-address.<br/>`);
+        $('#email_content').css("border-color", "red");
+        error = true;
+    }
+
+    if ( error ) {
+        $('#alert').show();
+        return;
+    }
+
+    // load and calc food prices
     var food_html = "";
     if( $("#food_checkbox").is(':checked') ) {
         var salad = $('#count_salat').val();
@@ -40,15 +74,23 @@ function reserve() {
             food_html += "Mousse au Chocolat x" + mousse + ": " + parseFloat(price).toFixed(2) + "€<br/>";
         }
 
-        food_html += `<hr style="width:100%;"><br/>Gesamt: ` + parseFloat(total).toFixed(2) + "€";
+        food_html += `<br/>Gesamt: ` + parseFloat(total).toFixed(2) + "€";
     }
 
     var result_html = `<div id="result" style="margin-top:40px;text-align:center;width:100%;">`;
     result_html += `<h2>VIELEN DANK F&Uuml;R IHRE BESTELLUNG</h2><br/>`;
+    result_html += `<p>Eine Bestellbest&auml;tigung wurde Ihnen per E-Mail geschickt.</p><br/>`;
+
+    result_html += `
+        <hr style="width:40%;"><br/>
+        ` + $('#select-day').val() + `. `+ $('#select-month option:selected').text() +` `+ $('#time_content').val() +`<br/><br/>
+        ` + name + `<br/>
+        ` + email + `<br/>
+    `;
 
     if ( food_html ) {
         result_html += `
-            <div style="font-size:11pt;margin:15px 0;width:40%;"><hr style="width:100%;">` + food_html + `</div>
+            <div style="font-size:12pt;margin:15px 0;width:40%;"><hr style="width:100%;">` + food_html + `</div>
         `;
     }
 
