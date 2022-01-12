@@ -10,7 +10,7 @@ function reserve() {
     // check if the user has selected a name
     var name = $('#name_content').val();
     if ( !name ) {
-        $('#alert-text').append(`Please add a name.<br/>`);
+        $('#alert-text').append(`Bitte geben Sie einen Namen an.<br/>`);
         $('#name_content').css("border-color", "red");
         error = true;
     } else {
@@ -20,11 +20,11 @@ function reserve() {
     // check if the user has selected an email
     var email = $('#email_content').val();
     if ( !email ) {
-        $('#alert-text').append(`Please add an email-address.<br/>`);
+        $('#alert-text').append(`Bitte geben Sie eine E-Mail Adresse an.<br/>`);
         $('#email_content').css("border-color", "red");
         error = true;
     } else if ( !valid_mail(email) ) {
-        $('#alert-text').append(`Please add a valid email-address.<br/>`);
+        $('#alert-text').append(`Bitte geben Sie eine gültige E-Mail Adresse an.<br/>`);
         $('#email_content').css("border-color", "red");
         error = true;
     } else {
