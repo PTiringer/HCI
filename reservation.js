@@ -31,6 +31,9 @@ function reserve() {
         $('#email_content').css("border-color", "black");
     }
 
+    // reserved seats
+    var seats = $('#seat_content').val();
+
     if ( error ) {
         $('#alert').show();
         return;
@@ -90,6 +93,7 @@ function reserve() {
         ` + $('#select-day').val() + `. `+ $('#select-month option:selected').text() +` `+ $('#time_content').val() +`<br/><br/>
         ` + name + `<br/>
         ` + email + `<br/>
+        ` + seats + `<br/>
     `;
 
     if ( food_html ) {

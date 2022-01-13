@@ -1,5 +1,5 @@
 body { background:#fafafa;margin:0 5%;width:90%; }
-body * { box-sizing:border-box;display:inline-block;font-family:'Trebuchet MS', sans-serif;font-size:16pt; }
+body * { box-sizing:border-box;cursor:default;display:inline-block;font-family:'Trebuchet MS', sans-serif;font-size:16pt; }
 
 #header {
     background-color:#daf0b9;
