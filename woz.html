@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WoZ</title>
+<script type="text/javascript" src="woz.js"></script>
+</head>
+<body>
+
+<h1>Student Input Interface</h1>
+
+<form>
+  <input type="button" value="Create DB" id="create" onclick="createDB();"><br/>
+</form> 
+
+<h3> Select Map Image: </h3>
+
+<form>
+  <!-- http://www.w3schools.com/tags/ref_eventattributes.asp -->
+  <input type="radio" name="mapImage" value="ressources\restaurant_base.png" onclick="set('mapImage');" checked>Base<br/>
+  <input type="radio" name="mapImage" value="ressources\restaurant_selected_table.png" onclick="set('mapImage');">Select Table<br/>
+  <input type="radio" name="mapImage" value="ressources\restaurant_move_table.png" onclick="set('mapImage');">Move Table<br/>
+</form> 
+
+<br/>
+
+</body>
+</html>

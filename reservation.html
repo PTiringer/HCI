@@ -110,15 +110,14 @@
 					</div>
                     <div id="seat"> 
 						<select id="seat_content">
-							<option> Keinen Platz reservieren</option>
-							<option> 1</option>
-							<option> 2</option>
-							<option> 3</option>
-							<option> 4</option>
-							<option> 5</option>
-							<option> 6</option>
-							<option> 7</option>
-							<option> 8</option>
+							<option> 1 Person</option>
+							<option> 2 Personen</option>
+							<option> 3 Personen</option>
+							<option> 4 Personen</option>
+							<option> 5 Personen</option>
+							<option> 6 Personen</option>
+							<option> 7 Personen</option>
+							<option> 8 Personen</option>
 						</select> 
 					</div>
                     <div id="comment"> 
@@ -140,7 +139,10 @@
 
                 <!-- TISCH ANSICHT -->
                 <div id="table-selection">
-                    &nbsp;
+					<div>
+						Platz auswählen:  <input type="checkbox" id="place_checkbox" onclick="checkPlace()">
+					</div>
+                    <img src="ressources\restaurant_base.png" width="500" id="mapImage" alt="map" style="display:none;"/>
                 </div>
 
                 <!-- ESSEN AUSWAHL -->
