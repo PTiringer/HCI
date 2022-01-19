@@ -93,3 +93,17 @@ function checkFood() {
     food_text.style.display = "none";
   }
 }
+
+function checkPlace() {
+	// Get the checkbox
+	var check_place = document.getElementById("place_checkbox");
+	// Get the output text
+	var mapImage = document.getElementById("mapImage");
+  
+	// If the checkbox is checked, display the output text
+	if (check_place.checked == true){
+	  mapImage.style.display = "block";
+	} else {
+	  mapImage.style.display = "none";
+	}
+  }
