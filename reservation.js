@@ -109,10 +109,11 @@ function reserve() {
 
 
 //WOZ
-var loginname = 'admin'
-var loginpass = 'admin'
+var loginname = 'admin';
+var loginpass = 'admin';
 
 var request = new XMLHttpRequest();
+var request_failed = 0;
 
 request.onreadystatechange = function() {
     // console.log("onreadystatechange: " + request.readyState + ", " +  request.status);
@@ -132,10 +133,19 @@ function get(variable) {
     // console.log("get " + variable);
     request.open("GET", dburl + variable, false);
 	request.setRequestHeader("Authorization", "Basic " + btoa(loginname + ":" + loginpass));
+    request.onerror = function(e) {
+        request_failed = 1;
+    };
     request.send();
 }
 
 function update() {
+
+    // don't produce the same error over and over if woz is not installed
+    if ( request_failed == 1 ) {
+        return;
+    }
+    
     for (var name in handlers) {
         // console.log("updating " + name);
         get(name);

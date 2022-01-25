@@ -10,6 +10,9 @@ window.onload = () => {
 
 function buildReservationTable(data){
 	var tableBody = document.getElementById('reservationData');
+	if ( !tableBody ) {
+		return;
+	}
 	let dataHTML = '';
 	
 	for(let d of data) {
@@ -18,7 +21,6 @@ function buildReservationTable(data){
 	console.log(dataHTML)
 	
 	/*sortieren der Daten nach Datum und Uhrzeit*/
-	
 	tableBody.innerHTML = dataHTML;
 }
 
