@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gusteau's</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+
+        <!-- NAVIGATION -->
+        <div id="header">
+            <a href="./index.html">Gusteau's</a>
+        </div>
+        <div id="index-list">
+            <div><a href="./reservation.html">Reservierung</a></div>
+            <div><a href="./admin.html">Administrator</a></div>
+
+            <div style="float:right; background-color:#f0ffd9;"><a href="./impressum.html">Impressum</a></div>
+            <div style="float:right;"><a href="./documentary.html">Documentary</a></div>
+        </div>
+
+        <div id="main-box" style="width:100%;">
+
+<p style="margin-left:5%;white-space:pre-line;">
+==========
+STARTSEITE
+==========
+
+HTML befindet sich in ./index.html
+
+Die Startseite dient dem Einstieg in das Restaurant-System.
+Von hier aus kann der Nutzer die Reservierungsseite oder das Impressum aufrufen.
+
+Ein Restaurant-Mitarbeiter kann von hier aus noch die Administrator-Seite starten.
+Aus Vorführungszwecken sind aktuell alle 3 Seiten sichtbar. Im wirklichen Gebrauch wäre die Administrator-Seite dann durch eine Berechtigung versteckt.
+
+
+============
+RESERVIERUNG
+============
+
+HTML befindet sich in ./reservation.html
+Der Gast kann auf dieser Seite seine Reservierung tätigen.
+Links finden sich Formularfelder für die Daten des Gastes.
+Er kann hier unter anderem das Datum, die Uhrzeit, die Anzahl der Sitzplätze wählen und auch Bemerkungen hinzufügen.
+Außerdem wird der Gast hier aufgefordert seinen Namen und seine E-Mail Adresse hinzuzufügen.
+
+Rechts befindet sich die Tischauswahl und die Essensauswahl.
+Diese können jeweils durch eine Checkbox geöffnet werden.
+
+Die Tischauswahl funktioniert über Woz.
+Der JS-Programmcode dafür ist in ./reservation.js und ./woz.js
+
+Die Essenauswahl lässt den Nutzer über ein Input-Feld oder über Plus und Minus Buttons sein Essen wählen.
+Der JS-Programmcode ist hierfür in ./script.js
+Das Input-Feld ist dabei auf die Zahlen 0 bis 5 limitiert.
+
+Unten ist noch der Reservierungs-Button.
+Das JS hierfür ist in ./reservation.js
+Beim drücken auf den Knopf werden zuerst alle Eingaben geprüft.
+Fehlt die E-Mail oder der Name, erscheint ein Fehler-Popup und das fehlende Feld wird rot markiert.
+Sind die Eingaben dagegen korrekt, erscheint ein Bestätigungs-Popup, wo der Nutzer sich vor der Reservierung nochmal umentscheiden kann.
+
+
+============
+BESTÄTIGUNG
+============
+
+JS befindet sich in ./reservation.js
+Wird komplett über JavaScript und jQuery generiert.
+
+Die Seite ergibt sich in dem die Eingaben des Nutzers von der Seite gezogen und in einem Bestätigungstext aufbereitet werden.
+Hierbei werden auch die Preise des vorbestellten Essens gesammelt und aufsummiert, so dass sich ein Gesamtpreis ergibt.
+Anschließend wird die Reservierungsseite mit empty(); geleert und durch den Bestätigungstext ersetzt.
+
+
+=============
+ADMINISTRATOR
+=============
+
+HTML befindet sich in ./admin.html
+Enthält eine Übersicht über die abgeschlossenen Reservierungen.
+
+
+============
+DOCUMENTARY
+============
+
+HTML befindet sich in ./documentary.html
+Kurze Textdokumentation zu den vorhandenen Seiten und Features.
+Würde selbstverständlich nicht in der realen Umgebung den Gästen sichtbar sein.
+
+
+=========
+IMPRESSUM
+=========
+
+HTML befindet sich in ./impressum.html
+Hier finden sich die Namen der Gruppenmitglieder, sowie die Verlinkungen zu dem GitHub und der HCI Wiki
+
+</p>
+
+
+</div>
+</body>
+</html>
