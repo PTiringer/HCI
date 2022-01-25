@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
 
         <link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="checkbox.css">
         <script src="script.js"></script>
 
 		<script src="jquery-3.6.0.min.js"></script>
@@ -134,23 +135,31 @@
             </div>
 
 
-            </div>
-            <div id="right-panel">
+		</div>
+		<div id="right-panel">
 
-                <!-- TISCH ANSICHT -->
-                <div id="table-selection">
-					<div>
-						Platz auswählen:  <input type="checkbox" id="place_checkbox" onclick="checkPlace()">
-					</div>
-                    <img src="ressources\restaurant_base.png" width="500" id="mapImage" alt="map" style="display:none;"/>
-                </div>
-
-                <!-- ESSEN AUSWAHL -->
-		<div id="food-selection">
-			<div>
-			Essen vorbestellen:  <input type="checkbox" id="food_checkbox" onclick="checkFood()">
+			<!-- TISCH ANSICHT -->
+			<div id="table-selection">
+				<div style="margin-bottom:10px;">
+					<div style="float:left;">Platz auswählen: </div>
+					<label class="check_container" style="float:left;">
+						<input type="checkbox" id="place_checkbox" onclick="checkPlace();">
+						<span class="check_span"></span>
+					</label>
+				</div>
+				<img src="ressources\restaurant_base.png" width="500" id="mapImage" alt="map" style="display:none;"/>
 			</div>
-			<div id=food_text style="display:none;">
+
+            <!-- ESSEN AUSWAHL -->
+			<div id="food-selection">
+				<div style="margin-bottom:10px;">
+					<div style="float:left;">Essen vorbestellen: </div>
+					<label class="check_container" style="float:left;">
+						<input type="checkbox" id="food_checkbox" onclick="checkFood();">
+						<span class="check_span"></span>
+					</label>
+				</div>
+				<div id=food_text style="display:none;">
                     	Bitte wählen Sie Ihr gewünschtes Essen aus:
                    		 <table>
 						<thead>
