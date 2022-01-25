@@ -3,7 +3,7 @@ function valid_mail(str) {
     return r.test(str);
 }
 
-function reserve() {
+function reserve( confirmed ) {
     var error = false;
     $('#alert-text').empty();
 
@@ -37,6 +37,11 @@ function reserve() {
     if ( error ) {
         $('#alert').show();
         return;
+    } else {
+        if ( confirmed != 1 ) {
+            $('#confirm-alert').show();
+            return;
+        }
     }
 
     // load and calc food prices

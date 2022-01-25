@@ -167,7 +167,7 @@ body * { box-sizing:border-box;display:inline-block;font-family:'Trebuchet MS', 
 
 #seat {
     margin-top:20px;
-    width: 50%;
+    width: 30%;
 }
 
 #seat_content {
@@ -221,17 +221,9 @@ thead { display: table-header-group;}
     width:92%;
 }
 
-#alert {
-    border:1px solid #000;
-    border-radius:3px;
-    background-color:#fff;
-    display:none;
-    left:35%;
-    padding:20px;
-    position:absolute;
-    text-align:center;
-    top:300px;
-    width:30%;
+#alert, #confirm-alert {
+    border:1px solid #000;border-radius:3px;background-color:#fff;display:none;left:35%;padding:20px;
+    position:absolute;text-align:center;top:300px;width:30%;
 }
-
-#alert p { margin:10px 0 30px 0;padding:0; }
+#alert p, #confirm-alert p { margin:10px 0 30px 0;padding:0; }
+#alert button, #confirm-alert button { min-width:15%; }

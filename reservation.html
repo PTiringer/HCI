@@ -129,7 +129,7 @@
             </div>
 
             <div id="submit-button">
-                <a onclick="reserve();" type="button">
+                <a onclick="reserve( 0 );" type="button">
                     RESERVIEREN
                 </a>
             </div>
@@ -236,6 +236,13 @@
 			</p>
 			<br/>
 			<button type="button" onclick="$('#alert').hide();">OK</button>
+		</div>
+
+		<div id="confirm-alert">
+			<p>Wollen Sie die Reservierung wirklich abschließen?</p>
+			<br/>
+			<button type="button" onclick="reserve( 1 );">Ja</button>
+			<button type="button" onclick="$('#confirm-alert').hide();">Nein</button>
 		</div>
     </body>
 </html>
