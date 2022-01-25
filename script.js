@@ -32,14 +32,43 @@ function customerInfo(email, comment) {
 	Information über den Tisch sollte in das json Array.*/
 }
 
-	/*Funktionen fürs Essen vorbestellen*/
-	
+/*Funktionen fürs Essen vorbestellen*/
+function checkMaxFood( amount ) {
+	var limit = 5;
+	if ( amount >= limit ) {
+		$('#alert-text').empty();
+		$('#alert-text').append(`Sie können ein Gericht maximal ` + limit + ` Mal vorbestellen.<br/>`);
+		$('#alert').show();
+		return -1;
+	}
+	return 1;
+}
+
+function checkFood() {
+	// Get the checkbox
+	var check_food = document.getElementById("food_checkbox");
+	// Get the output text
+	var food_text = document.getElementById("food_text");
+  
+	// If the checkbox is checked, display the output text
+	if (check_food.checked == true){
+	  food_text.style.display = "block";
+	} else {
+	  food_text.style.display = "none";
+	}
+  }
+
 function doMinus_salat(){
-	if (document.getElementById("count_salat").value > 0) {
-	document.getElementById("count_salat").value = --document.getElementById("count_salat").value;}
+	var count_salat = document.getElementById("count_salat").value;
+	if (count_salat > 0) {
+		count_salat = --document.getElementById("count_salat").value;
+	}
 }
 function doPlus_salat(){
-  document.getElementById("count_salat").value = ++document.getElementById("count_salat").value;
+	var count_salat = document.getElementById("count_salat").value;
+	if ( checkMaxFood( count_salat ) != -1 ) {
+		document.getElementById("count_salat").value++;
+	}
 }
 
 function doMinus_suppe(){
@@ -47,7 +76,10 @@ function doMinus_suppe(){
 	document.getElementById("count_suppe").value = --document.getElementById("count_suppe").value;}
 }
 function doPlus_suppe(){
-  document.getElementById("count_suppe").value = ++document.getElementById("count_suppe").value;
+	var count_suppe = document.getElementById("count_suppe").value;
+	if ( checkMaxFood( count_suppe ) != -1 ) {
+		document.getElementById("count_suppe").value++;
+	}
 }
 
 function doMinus_steak(){
@@ -55,7 +87,10 @@ function doMinus_steak(){
 	document.getElementById("count_steak").value = --document.getElementById("count_steak").value;}  
 }
 function doPlus_steak(){
-  document.getElementById("count_steak").value = ++document.getElementById("count_steak").value;
+	var count_steak = document.getElementById("count_steak").value;
+	if ( checkMaxFood( count_steak ) != -1 ) {
+		document.getElementById("count_steak").value++;
+	}
 }
 
 function doMinus_ravioli(){
@@ -63,7 +98,10 @@ function doMinus_ravioli(){
 	document.getElementById("count_ravioli").value = --document.getElementById("count_ravioli").value;}  
 }
 function doPlus_ravioli(){
-  document.getElementById("count_ravioli").value = ++document.getElementById("count_ravioli").value;
+	var count_ravioli = document.getElementById("count_ravioli").value;
+	if ( checkMaxFood( count_ravioli ) != -1 ) {
+		document.getElementById("count_ravioli").value++;
+	}
 }
 
 function doMinus_gemuese(){
@@ -71,7 +109,10 @@ function doMinus_gemuese(){
 	document.getElementById("count_gemuese").value = --document.getElementById("count_gemuese").value;}  
 }
 function doPlus_gemuese(){
-  document.getElementById("count_gemuese").value = ++document.getElementById("count_gemuese").value;
+	var count_gemuese = document.getElementById("count_gemuese").value;
+	if ( checkMaxFood( count_gemuese ) != -1 ) {
+		document.getElementById("count_gemuese").value++;
+	}
 }
 
 function doMinus_mousse(){
@@ -79,21 +120,10 @@ function doMinus_mousse(){
 	document.getElementById("count_mousse").value = --document.getElementById("count_mousse").value;}  
 }
 function doPlus_mousse(){
-  document.getElementById("count_mousse").value = ++document.getElementById("count_mousse").value;
-}
-
-function checkFood() {
-  // Get the checkbox
-  var check_food = document.getElementById("food_checkbox");
-  // Get the output text
-  var food_text = document.getElementById("food_text");
-
-  // If the checkbox is checked, display the output text
-  if (check_food.checked == true){
-    food_text.style.display = "block";
-  } else {
-    food_text.style.display = "none";
-  }
+	var count_mousse = document.getElementById("count_mousse").value;
+	if ( checkMaxFood( count_mousse ) != -1 ) {
+		document.getElementById("count_mousse").value++;
+	}
 }
 
 function checkPlace() {
