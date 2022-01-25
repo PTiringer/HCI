@@ -13,3 +13,8 @@
 
 .check_span { position:absolute;top:0;left:0;height:22px;width:22px;background-color:#eee; }
 .check_span:after { content:"";position:absolute;display:none; }
+
+.button_food {background-color: green; border: none; color: white; text-align: center; text-decoration: none; display: inline-block; font-size: 20px; cursor: pointer; border-radius: 2px; width: 25px;
+}
+.button_food:hover {background-color: green; color: white;
+}
