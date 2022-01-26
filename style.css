@@ -110,20 +110,23 @@ body * { box-sizing:border-box;display:inline-block;font-family:'Trebuchet MS', 
     border: 1px solid black;
     float:left;
     border-radius: 4px;
-    width:30%;
+    width:20%;
+}
+
+#select-day-2{
+    border: 1px solid black;
+    float:left;
+    border-radius: 4px;
+    width:20%;
+    margin-left: 5%;
 }
 
 #select-month {
     border: 1px solid black;
     float:left;
     border-radius: 4px;
-    margin-left:10%;
-    width:60%;
-}
-
-#spacing {
-    width: 20%;
-    height: 100%;
+    width:45%;
+    margin-left: 5%;
 }
 
 #time {
@@ -135,6 +138,20 @@ body * { box-sizing:border-box;display:inline-block;font-family:'Trebuchet MS', 
     border: 1px solid black;
     border-radius: 4px;
     width:100%;
+    text-align: center;
+}
+
+#minute {
+    margin-left:5%;
+    width: 20%;
+    height: 100%;
+}
+
+#minute_content {
+    border: 1px solid black;
+    border-radius: 4px;
+    width:100%;
+    text-align: center;
 }
 
 #name {
