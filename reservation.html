@@ -8,7 +8,10 @@
 		<link rel="stylesheet" href="checkbox.css">
         <script src="script.js"></script>
 
-		<script src="jquery-3.6.0.min.js"></script>
+		<script src="./jquery/jquery-3.6.0.min.js"></script>
+		<script src="./jquery/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="./jquery/jquery-ui.min.css">
+
 		<script src="reservation.js"></script>
     </head>
 
@@ -33,41 +36,8 @@
             <!-- FORM (DATUM, NAME, MAIL) -->
             <div id="form">
                 <div id="date_time_container"> 
-                    <div id='date'> 
-						<div class="select-date">
-							<select id="select-day">
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-							</select>
-							<select id="select-day-2">
-								<option> 0 </option>
-								<option> 1 </option>
-								<option> 2 </option>
-								<option> 3 </option>
-								<option> 4 </option>
-								<option> 5 </option>
-								<option> 6 </option>
-								<option> 7 </option>
-								<option> 8 </option>
-								<option> 9 </option>
-							</select>
-							<select id="select-month">
-								<option value="0">Januar
-								<option value="1">Februar
-								<option value="2">März
-								<option value="3">April
-								<option value="4">Mai
-								<option value="5">Juni
-								<option value="6">Juli
-								<option value="7">August
-								<option value="8">September
-								<option value="9">October
-								<option value="10">November
-								<option value="11">Dezember
-							</select>
-						  </div>	
+                    <div id="date">
+						<input type="text" id="date-input" autocomplete="off" name="reservationDate">
 					</div>
                     <div id='time'>
 						<select id="time_content">

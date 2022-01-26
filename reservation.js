@@ -1,11 +1,35 @@
+$('document').ready(function() {
+    $(function() {
+        $( "#date-input" ).datepicker({
+            showOtherMonths: true,
+            dateFormat: 'dd.mm.yy', // format of the datepicker
+            selectOtherMonths: true,
+            minDate: 0, // only allow future dates
+        });
+    });
+});
+
+
+// check if the mail format is valid
 function valid_mail(str) {
     var r = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return r.test(str);
 }
 
+// reservation button was clicked
 function reserve( confirmed ) {
     var error = false;
     $('#alert-text').empty();
+
+    // check if the user has selected a date
+    var date = $('#date-input').val();
+    if ( !date ) {
+        $('#alert-text').append(`Bitte geben Sie ein Reservierungs-Datum an.<br/>`);
+        $('#date-input').css("border-color", "red");
+        error = true;
+    } else {
+        $('#date-input').css("border-color", "black");
+    }
 
     // check if the user has selected a name
     var name = $('#name_content').val();
@@ -89,13 +113,24 @@ function reserve( confirmed ) {
         food_html += `<br/>Gesamt: ` + parseFloat(total).toFixed(2) + "€";
     }
 
+    // build the confirmation text
     var result_html = `<div id="result" style="margin-top:40px;text-align:center;width:100%;">`;
     result_html += `<h2>VIELEN DANK F&Uuml;R IHRE BESTELLUNG</h2><br/>`;
     result_html += `<p>Eine Bestellbest&auml;tigung wurde Ihnen per E-Mail geschickt.</p><br/>`;
 
+    // collect the date and time from the user input
+    var hours = $('#time_content option:selected').text();
+    var minutes = $('#minute_content option:selected').text();
+    var time = hours + ':' + minutes;
+
+    // some very odd things are happening with space characters if we don't do this
+    var date_time = date + " - " + time;
+    date_time = date_time.replace(/ +(?= )/g,'');
+    date_time = date_time.replace(/ : /g,':');
+
     result_html += `
         <hr style="width:40%;"><br/>
-        ` + $('#select-day').val() + `. `+ $('#select-month option:selected').text() +` `+ $('#time_content').val() +`<br/><br/>
+        ` + date_time + `<br/><br/>
         ` + name + `<br/>
         ` + email + `<br/>
         ` + seats + `<br/>
