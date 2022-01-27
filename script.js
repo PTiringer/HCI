@@ -1,6 +1,7 @@
 var reservationArray = [
 	{'date':'20-03-2022', 'time':'20:00', 'name':'Klaus Klausen', 'email':'klaus.en@gmy.de', 'seats':'4', 'comment':'', 'table':'A12'},
 	{'date':'20-03-2022', 'time':'20:30', 'name':'Mareike Ke', 'email':'mareike-ke@geemail.com', 'seats':'2', 'comment':'', 'table':'B06'},
+	{'date':'20-03-2022', 'time':'20:45', 'name':'Max Mustermann', 'email':'max@mustermann.com', 'seats':'8', 'comment':'', 'table':'A09, A10'},
 	{'date':'21-03-2022', 'time':'19:45', 'name':'Anne Susanne', 'email':'sus-anne@gmy.de', 'seats':'6', 'comment':'Vielleicht sind wir doch nur 5.', 'table':'A15, A16'}
 ];
 
@@ -16,7 +17,7 @@ function buildReservationTable(data){
 	let dataHTML = '';
 	
 	for(let d of data) {
-		dataHTML += `<tr onclick="customerInfo('${d.email}', '${d.comment}')"><td>${d.date}</td><td>${d.time}</td><td>${d.name}</td><td>${d.seats}</td><td>${d.table}</td></tr>`;
+		dataHTML += `<tr onclick="customerInfo('${d.email}', '${d.comment}', '${d.seats}')"><td>${d.date}</td><td>${d.time}</td><td>${d.name}</td><td>${d.seats}</td><td>${d.table}</td></tr>`;
 	}
 	console.log(dataHTML)
 	
@@ -24,12 +25,19 @@ function buildReservationTable(data){
 	tableBody.innerHTML = dataHTML;
 }
 
-function customerInfo(email, comment) {
+function customerInfo(email, comment, seats) {
 	document.getElementById("commentInfo").innerHTML = comment;
 	document.getElementById("emailInfo").innerHTML = email;
 	
 	/*Markieren vom ausgewählten Tisch auf der Karte.
 	Information über den Tisch sollte in das json Array.*/
+	if(seats == 4){
+		document.getElementById("adminMap").src = "ressources/restaurant_admin_four.png";
+	}else if(seats == 2){
+		document.getElementById("adminMap").src = "ressources/restaurant_admin_two.png";
+	}else if(seats == 8){
+		document.getElementById("adminMap").src = "ressources/restaurant_move_table.png";
+	}
 }
 
 /*Funktionen fürs Essen vorbestellen*/
